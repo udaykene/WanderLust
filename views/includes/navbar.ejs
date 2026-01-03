@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary border-bottom sticky-top">
+  <div class="container-fluid flex align-items-center bg-body-tertiary">
+    <a class="navbar-brand" href="#"
+      ><i class="ri-compass-discover-line"></i><span>airbnb</span></a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse d-flex justify-content-between navbar-collapse"
+      id="navbarNavAltMarkup"
+    >
+      <div class="navbar-nav">
+        <a class="nav-link" aria-current="page" href="/">Home</a>
+        <a class="nav-link" href="/listings">All Listings</a>
+        <a class="nav-link" href="/listings/new">Add New Listings</a>
+      </div>
+      <div class="navbar-nav">
+        <% if(!CurrentUser) { %>
+        <a class="nav-link" aria-current="page" href="/signup">Signup</a>
+        <a class="nav-link" href="/login">Login</a>
+        <% } %> <% if(CurrentUser) { %>
+        <a class="nav-link logout-icon" href="/logout"><i class="ri-logout-box-r-line"></i></a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
